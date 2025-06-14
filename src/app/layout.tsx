@@ -5,7 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { InteractiveGradientBackground } from '@/components/InteractiveGradientBackground';
 
 export const metadata: Metadata = {
-  title: 'Praveen Patil - Portfolio',
+  title: 'Praveen Patil',
   description: 'Praveen Patil - Final-year Computer Science student, Python developer, and open-source contributor.',
 };
 
