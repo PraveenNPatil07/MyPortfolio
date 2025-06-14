@@ -1,5 +1,7 @@
-# Firebase Studio
+# 💼 My Portfolio
 
-This is a NextJS starter in Firebase Studio.
+This is my personal developer portfolio website built using **React** and deployed on **Vercel**. It highlights my skills, projects, experience, and contact information.
 
-To get started, take a look at src/app/page.tsx.
+### 🌐 Live Demo
+
+🔗 [View Portfolio](https://praveenpatil.vercel.app/)
