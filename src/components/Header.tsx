@@ -34,7 +34,6 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 target={item.target}
-                download
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-md font-semibold shadow-md hover:opacity-90 transition-all duration-300"
               >
                 {item.label}
@@ -70,7 +69,6 @@ export function Header() {
                       href={item.href}
                       target={item.target}
                       onClick={closeSheet}
-                      download
                       className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-md font-semibold shadow-md hover:opacity-90 transition-all duration-300"
                     >
                       {item.label}
