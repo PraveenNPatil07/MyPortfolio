@@ -1,12 +1,8 @@
 "use client";
 import { Section } from "@/components/Section";
 import { motion } from "framer-motion";
-import { FaReact } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
-import { TbBrandTailwind, TbBrandTypescript, TbBrandCpp } from "react-icons/tb";
+import { TbBrandCpp } from "react-icons/tb";
 import {
-  SiNodedotjs,
-  SiFramer,
   SiPython,
   SiC,
   SiMysql,
@@ -26,16 +22,12 @@ import {
   SiGooglecolab,
   SiPandas,
   SiNumpy,
+  SiJupyter,
 } from "react-icons/si";
+import { FaCoffee } from "react-icons/fa";
 
 export const SkillsSection = () => {
   const techIcons = [
-    { icon: FaReact, name: "React" },
-    { icon: RiNextjsFill, name: "Next.js" },
-    { icon: TbBrandTailwind, name: "Tailwind CSS" },
-    { icon: TbBrandTypescript, name: "TypeScript" },
-    { icon: SiNodedotjs, name: "Node.js" },
-    { icon: SiFramer, name: "Framer Motion" },
     { icon: SiPython, name: "Python" },
     { icon: SiC, name: "C" },
     { icon: TbBrandCpp, name: "C++" },
@@ -56,6 +48,8 @@ export const SkillsSection = () => {
     { icon: SiGooglecolab, name: "Google Colab" },
     { icon: SiPandas, name: "Pandas" },
     { icon: SiNumpy, name: "NumPy" },
+    { icon: FaCoffee, name: "Java" },
+    { icon: SiJupyter, name: "Jupyter" },
   ];
 
   const repeatedIcons = Array(3).fill(techIcons).flat();
