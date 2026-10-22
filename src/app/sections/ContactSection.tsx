@@ -1,18 +1,16 @@
-
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Section } from "@/components/Section";
-import { IconLink } from "@/components/IconLink";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "motion/react";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -22,7 +20,7 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>;
 
-const contentVariants = {
+const contentVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: (delay: number = 0) => ({
     opacity: 1,
@@ -31,13 +29,11 @@ const contentVariants = {
   }),
 };
 
-export function ContactSection() {
-  const [mounted, setMounted] = useState(false);
-  const { toast } = useToast();
+const emptySubscribe = () => () => {};
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+export function ContactSection() {
+  const mounted = React.useSyncExternalStore(emptySubscribe, () => true, () => false);
+  const { toast } = useToast();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),

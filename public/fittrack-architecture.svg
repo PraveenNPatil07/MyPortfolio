@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas Gradient -->
+    <linearGradient id="ft-bg-canvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060d13"/>
+      <stop offset="50%" stop-color="#09141c"/>
+      <stop offset="100%" stop-color="#050a0f"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="ft-card-surface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#121d28"/>
+      <stop offset="100%" stop-color="#0c1620"/>
+    </linearGradient>
+
+    <!-- Code Surface Gradient -->
+    <linearGradient id="ft-code-surface" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#081017"/>
+      <stop offset="100%" stop-color="#050a0e"/>
+    </linearGradient>
+
+    <!-- Radial Emerald Glow -->
+    <radialGradient id="ft-center-glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#059669" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Technical Grid Pattern -->
+    <pattern id="ft-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#1e3a47" fill-opacity="0.4"/>
+    </pattern>
+
+    <!-- Glow Filters -->
+    <filter id="ft-glow-emerald" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="ft-glow-amber" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="ft-glow-purple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Markers -->
+    <marker id="ft-arrow-emerald" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#34d399"/>
+    </marker>
+    <marker id="ft-arrow-amber" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="ft-arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#c084fc"/>
+    </marker>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="675" fill="url(#ft-bg-canvas)"/>
+  <rect width="1200" height="675" fill="url(#ft-grid)"/>
+  <rect width="1200" height="675" fill="url(#ft-center-glow)"/>
+
+  <!-- ================= TOP WINDOW CHROME ================= -->
+  <rect x="40" y="30" width="1120" height="58" rx="12" fill="#0c1622" stroke="#1e2d3d" stroke-width="1.5"/>
+  
+  <!-- Window traffic light dots -->
+  <circle cx="68" cy="59" r="6" fill="#ef4444"/>
+  <circle cx="88" cy="59" r="6" fill="#f59e0b"/>
+  <circle cx="108" cy="59" r="6" fill="#10b981"/>
+
+  <!-- Window Title -->
+  <text x="135" y="64" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">FitTrack</text>
+  <text x="205" y="64" fill="#64748b" font-family="ui-monospace, monospace" font-size="13">/ Distributed Microservices Architecture &amp; Event-Driven AI Engine</text>
+
+  <!-- Live Status Badges -->
+  <rect x="730" y="44" width="125" height="30" rx="6" fill="#0d2319" stroke="#059669" stroke-width="1"/>
+  <circle cx="745" cy="59" r="4.5" fill="#34d399" filter="url(#ft-glow-emerald)"/>
+  <text x="758" y="64" fill="#d1fae5" font-family="ui-monospace, monospace" font-size="12" font-weight="600">Spring Boot 3.3</text>
+
+  <rect x="865" y="44" width="135" height="30" rx="6" fill="#241a10" stroke="#d97706" stroke-width="1"/>
+  <circle cx="880" cy="59" r="4.5" fill="#fbbf24" filter="url(#ft-glow-amber)"/>
+  <text x="893" y="64" fill="#fef3c7" font-family="ui-monospace, monospace" font-size="12" font-weight="600">RabbitMQ AMQP</text>
+
+  <rect x="1010" y="44" width="135" height="30" rx="6" fill="#20142b" stroke="#7e22ce" stroke-width="1"/>
+  <circle cx="1025" cy="59" r="4.5" fill="#c084fc" filter="url(#ft-glow-purple)"/>
+  <text x="1038" y="64" fill="#f3e8ff" font-family="ui-monospace, monospace" font-size="12" font-weight="600">Google Gemini</text>
+
+  <!-- ================= COLUMN 1: ROUTING & AUTHENTICATION ================= -->
+  <rect x="40" y="106" width="345" height="535" rx="14" fill="url(#ft-card-surface)" stroke="#1e2d3d" stroke-width="1.5"/>
+  
+  <!-- Column 1 Header -->
+  <rect x="40" y="106" width="345" height="48" rx="14" fill="#101c27"/>
+  <circle cx="65" cy="130" r="5" fill="#38bdf8"/>
+  <text x="80" y="135" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">1. Ingestion &amp; Security</text>
+
+  <!-- Client Tile -->
+  <rect x="58" y="168" width="309" height="98" rx="10" fill="url(#ft-code-surface)" stroke="#1e2d3d" stroke-width="1.2"/>
+  <circle cx="78" cy="190" r="4.5" fill="#38bdf8"/>
+  <text x="92" y="194" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">React 19 Client</text>
+  <rect x="270" y="178" width="82" height="22" rx="4" fill="#0c1d29"/>
+  <text x="279" y="193" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">Port: 5173</text>
+  <text x="75" y="222" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11.5">Auth Code + PKCE Flow</text>
+  <text x="75" y="244" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Redux Toolkit · Immediate UI feedback</text>
+
+  <!-- Gateway Tile -->
+  <rect x="58" y="280" width="309" height="190" rx="10" fill="url(#ft-code-surface)" stroke="#059669" stroke-width="1.4"/>
+  <rect x="58" y="280" width="309" height="30" rx="10" fill="#0a2119"/>
+  <circle cx="78" cy="295" r="4.5" fill="#34d399"/>
+  <text x="92" y="300" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Spring Cloud Gateway</text>
+  <rect x="270" y="284" width="82" height="22" rx="4" fill="#064e3b"/>
+  <text x="279" y="299" fill="#34d399" font-family="ui-monospace, monospace" font-size="11">Port: 8080</text>
+  
+  <text x="75" y="334" fill="#34d399" font-family="ui-monospace, monospace" font-size="11.5" font-weight="600">Reactive WebFlux Engine</text>
+  <text x="75" y="358" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Validates Keycloak JWT via JWKS</text>
+  <text x="75" y="380" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Injects X-User-ID down to microservices</text>
+  <text x="75" y="402" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">• Dynamic load-balanced routes</text>
+
+  <rect x="75" y="420" width="275" height="36" rx="6" fill="#042016" stroke="#059669" stroke-width="1"/>
+  <text x="88" y="442" fill="#34d399" font-family="ui-monospace, monospace" font-size="11">lb://activity-service (/api/activities)</text>
+
+  <!-- Keycloak Tile -->
+  <rect x="58" y="485" width="309" height="138" rx="10" fill="url(#ft-code-surface)" stroke="#1e2d3d" stroke-width="1.2"/>
+  <circle cx="78" cy="508" r="4.5" fill="#c084fc"/>
+  <text x="92" y="512" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Keycloak 24 IAM</text>
+  <rect x="270" y="496" width="82" height="22" rx="4" fill="#20142b"/>
+  <text x="279" y="511" fill="#c084fc" font-family="ui-monospace, monospace" font-size="11">Port: 8180</text>
+  <text x="75" y="542" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">OAuth2.0 / OIDC Identity Provider</text>
+  <text x="75" y="566" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Issues signed RS256 access tokens.</text>
+  <text x="75" y="590" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">Zero shared secrets in gateway</text>
+
+  <!-- ================= COLUMN 2: DECOUPLED MICROSERVICES ================= -->
+  <rect x="405" y="106" width="380" height="535" rx="14" fill="url(#ft-card-surface)" stroke="#1e2d3d" stroke-width="1.5"/>
+  
+  <!-- Column 2 Header -->
+  <rect x="405" y="106" width="380" height="48" rx="14" fill="#101c27"/>
+  <circle cx="430" cy="130" r="5" fill="#34d399"/>
+  <text x="445" y="135" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">2. Polyglot Microservices</text>
+
+  <!-- User Service Block -->
+  <rect x="423" y="168" width="344" height="142" rx="10" fill="url(#ft-code-surface)" stroke="#1e2d3d" stroke-width="1.2"/>
+  <rect x="423" y="168" width="344" height="28" rx="10" fill="#0d1b26"/>
+  <circle cx="440" cy="182" r="4.5" fill="#38bdf8"/>
+  <text x="454" y="186" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">User Service (:8081)</text>
+  <text x="690" y="186" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11">Spring Boot</text>
+
+  <text x="440" y="218" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Manages athlete profiles, metabolic targets &amp; history.</text>
+  
+  <rect x="440" y="235" width="310" height="30" rx="6" fill="#081524" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="452" y="255" fill="#60a5fa" font-family="ui-monospace, monospace" font-size="11.5">PostgreSQL (ACID Normalized Identity)</text>
+
+  <text x="440" y="290" fill="#64748b" font-family="ui-monospace, monospace" font-size="11">Decoupled schema from activity volume</text>
+
+  <!-- Activity Ingestion Service Block -->
+  <rect x="423" y="325" width="344" height="195" rx="10" fill="url(#ft-code-surface)" stroke="#059669" stroke-width="1.4"/>
+  <rect x="423" y="325" width="344" height="28" rx="10" fill="#0a2119"/>
+  <circle cx="440" cy="339" r="4.5" fill="#34d399"/>
+  <text x="454" y="343" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Activity Service (:8082)</text>
+  <text x="690" y="343" fill="#34d399" font-family="ui-monospace, monospace" font-size="11">Spring Boot</text>
+
+  <text x="440" y="375" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="12">High-throughput ingestion for GPS, cadence &amp; heart rate.</text>
+
+  <rect x="440" y="392" width="310" height="30" rx="6" fill="#042016" stroke="#059669" stroke-width="1"/>
+  <text x="452" y="412" fill="#34d399" font-family="ui-monospace, monospace" font-size="11.5">MongoDB Atlas (Time-Series Telemetry)</text>
+
+  <rect x="440" y="432" width="310" height="32" rx="6" fill="#18110b" stroke="#78350f" stroke-width="1"/>
+  <text x="452" y="452" fill="#fbbf24" font-family="ui-monospace, monospace" font-size="11">AMQP Publish: fitness.exchange</text>
+
+  <text x="440" y="488" fill="#34d399" font-family="ui-monospace, monospace" font-size="11">⚡ Non-blocking client response: 12ms</text>
+
+  <!-- Netflix Eureka Service Discovery Badge -->
+  <rect x="423" y="535" width="344" height="88" rx="10" fill="url(#ft-code-surface)" stroke="#1e2d3d" stroke-width="1.2"/>
+  <text x="442" y="562" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700">Netflix Eureka Discovery &amp; Config Server (:8761)</text>
+  <text x="442" y="585" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Automated heartbeat liveness &amp; dynamic routing registry.</text>
+  <text x="442" y="605" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="10.5">Central git-backed externalized configuration</text>
+
+  <!-- ================= COLUMN 3: EVENT BROKER & AI RECOMMENDATION ================= -->
+  <rect x="805" y="106" width="355" height="535" rx="14" fill="url(#ft-card-surface)" stroke="#1e2d3d" stroke-width="1.5"/>
+  
+  <!-- Column 3 Header -->
+  <rect x="805" y="106" width="355" height="48" rx="14" fill="#101c27"/>
+  <circle cx="830" cy="130" r="5" fill="#fbbf24"/>
+  <text x="845" y="135" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700">3. RabbitMQ &amp; AI Engine</text>
+
+  <!-- RabbitMQ Message Queue Block -->
+  <rect x="823" y="168" width="319" height="205" rx="10" fill="url(#ft-code-surface)" stroke="#d97706" stroke-width="1.4"/>
+  <rect x="823" y="168" width="319" height="28" rx="10" fill="#221509"/>
+  <circle cx="840" cy="182" r="4.5" fill="#fbbf24"/>
+  <text x="854" y="186" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">RabbitMQ Broker (:5672)</text>
+  <text x="1080" y="186" fill="#fbbf24" font-family="ui-monospace, monospace" font-size="11">AMQP</text>
+
+  <text x="840" y="216" fill="#fbbf24" font-family="ui-monospace, monospace" font-size="11.5" font-weight="600">Queue: activity.recorded.queue</text>
+
+  <!-- JSON Message Payload -->
+  <rect x="838" y="228" width="289" height="105" rx="6" fill="#080e14" stroke="#1e2d3d"/>
+  <text x="850" y="248" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">{</text>
+  <text x="862" y="266" font-family="ui-monospace, monospace" font-size="11"><tspan fill="#7dd3fc">"activityId"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#34d399">"act_9912"</tspan><tspan fill="#94a3b8">,</tspan></text>
+  <text x="862" y="284" font-family="ui-monospace, monospace" font-size="11"><tspan fill="#7dd3fc">"sport"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#34d399">"RUNNING"</tspan><tspan fill="#94a3b8">, </tspan><tspan fill="#7dd3fc">"cadence"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#fbbf24">174</tspan><tspan fill="#94a3b8">,</tspan></text>
+  <text x="862" y="302" font-family="ui-monospace, monospace" font-size="11"><tspan fill="#7dd3fc">"avgHeartRate"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#f87171">162</tspan><tspan fill="#94a3b8">, </tspan><tspan fill="#7dd3fc">"durationMins"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#fbbf24">45</tspan></text>
+  <text x="850" y="320" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="11">}</text>
+
+  <text x="840" y="354" fill="#34d399" font-family="ui-monospace, monospace" font-size="11">✓ Protects API from LLM latency spikes</text>
+
+  <!-- AI Recommendation Service Block -->
+  <rect x="823" y="390" width="319" height="233" rx="10" fill="url(#ft-code-surface)" stroke="#7e22ce" stroke-width="1.4"/>
+  <rect x="823" y="390" width="319" height="28" rx="10" fill="#1b0e27"/>
+  <circle cx="840" cy="404" r="4.5" fill="#c084fc"/>
+  <text x="854" y="408" fill="#f8fafc" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">AI Recommendation Engine</text>
+  <text x="1080" y="408" fill="#c084fc" font-family="ui-monospace, monospace" font-size="11">:8083</text>
+
+  <text x="840" y="438" fill="#c084fc" font-family="ui-monospace, monospace" font-size="11.5" font-weight="600">Google Gemini 1.5 Integration</text>
+  <text x="840" y="460" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Consumes workout telemetry asynchronously from queue.</text>
+
+  <!-- Generated AI Output Snippet -->
+  <rect x="838" y="475" width="289" height="98" rx="6" fill="#140a1f" stroke="#7e22ce" stroke-width="1"/>
+  <text x="850" y="495" fill="#f3e8ff" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Gemini LLM Output:</text>
+  <text x="850" y="515" fill="#d8b4fe" font-family="ui-monospace, monospace" font-size="10.5">"Zone 4 threshold maintained for 22m.</text>
+  <text x="850" y="533" fill="#d8b4fe" font-family="ui-monospace, monospace" font-size="10.5">Recommend 48h active recovery with</text>
+  <text x="850" y="551" fill="#d8b4fe" font-family="ui-monospace, monospace" font-size="10.5">low-impact mobility &amp; hydration target."</text>
+
+  <rect x="838" y="582" width="289" height="24" rx="4" fill="#042016"/>
+  <text x="850" y="598" fill="#34d399" font-family="ui-monospace, monospace" font-size="10.5">Persisted to MongoDB: /recommendations</text>
+
+  <!-- Connectors Between Columns -->
+  <!-- Col 1 to Col 2 -->
+  <path d="M 385 375 L 423 375" stroke="#34d399" stroke-width="2.5" fill="none" marker-end="url(#ft-arrow-emerald)"/>
+  <!-- Col 2 to Col 3 -->
+  <path d="M 767 448 L 823 270" stroke="#fbbf24" stroke-width="2.5" fill="none" marker-end="url(#ft-arrow-amber)"/>
+  <!-- RabbitMQ down to AI Service -->
+  <path d="M 982 373 L 982 390" stroke="#c084fc" stroke-width="2.5" fill="none" marker-end="url(#ft-arrow-purple)"/>
+</svg>

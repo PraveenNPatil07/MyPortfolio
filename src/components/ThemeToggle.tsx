@@ -1,4 +1,3 @@
-
 "use client"
 
 import * as React from "react"
@@ -7,17 +6,18 @@ import { useTheme } from "next-themes"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
 
-export function ThemeToggle() {
-  const [mounted, setMounted] = React.useState(false)
-  const { theme, setTheme } = useTheme()
+const emptySubscribe = () => () => {};
 
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
+export function ThemeToggle() {
+  const mounted = React.useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
+  const { theme, setTheme } = useTheme();
 
   if (!mounted) {
-    // Return a placeholder to avoid hydration mismatch and layout shift
-    return <div className="flex items-center space-x-2 h-10 w-[76px]"></div>;
+    return <div className="flex items-center space-x-2 h-10 w-[76px]" />;
   }
 
   const isDarkMode = theme === "dark";
@@ -28,17 +28,17 @@ export function ThemeToggle() {
 
   return (
     <div className="flex items-center space-x-2">
-      <Sun className={`h-5 w-5 transition-colors ${!isDarkMode ? 'text-primary' : 'text-muted-foreground'}`} />
+      <Sun className={`h-5 w-5 transition-all duration-200 ${!isDarkMode ? 'text-primary scale-110' : 'text-muted-foreground scale-95 opacity-60'}`} />
       <Switch
         id="theme-toggle"
         checked={isDarkMode}
         onCheckedChange={handleThemeChange}
         aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
       />
-      <Moon className={`h-5 w-5 transition-colors ${isDarkMode ? 'text-primary' : 'text-muted-foreground'}`} />
+      <Moon className={`h-5 w-5 transition-all duration-200 ${isDarkMode ? 'text-primary scale-110' : 'text-muted-foreground scale-95 opacity-60'}`} />
       <Label htmlFor="theme-toggle" className="sr-only">
         Toggle theme
       </Label>
     </div>
-  )
+  );
 }

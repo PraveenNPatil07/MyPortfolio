@@ -1,14 +1,8 @@
-
 "use client";
 
 import { ProjectCard } from "@/components/ProjectCard";
 import { Section } from "@/components/Section";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const projects = [
   {
@@ -49,7 +43,6 @@ const projects = [
   },
 ];
 
-
 const sectionTitleVariants = {
   hidden: { opacity: 0, y: -50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -64,7 +57,6 @@ const cardVariants = (index: number) => ({
     transition: { duration: 0.6, delay: (index % 2) * 0.1 }
   },
 });
-
 
 export function ProjectsSection() {
   return (
@@ -92,8 +84,7 @@ export function ProjectsSection() {
             </motion.div>
           ))}
         </div>
-        </div>
+      </div>
     </Section>
   );
 }
-

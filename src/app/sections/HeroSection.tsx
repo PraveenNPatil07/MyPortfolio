@@ -1,39 +1,31 @@
-
 "use client";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/Section";
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Send, Linkedin, Instagram, Twitter, Link as LinkIcon, Code } from "lucide-react";
-import { SiLeetcode } from "react-icons/si";
-import { SiCodechef } from "react-icons/si";
-import { motion } from "framer-motion";
+import { Send } from "lucide-react";
+import { SiGithub, SiLinkedin, SiInstagram, SiLeetcode, SiCodechef } from "react-icons/si";
+import { motion, type Variants } from "motion/react";
 
-const textBlockVariants = {
+const textBlockVariants: Variants = {
   hidden: { opacity: 0, x: -50 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const imageVariants = {
+const imageVariants: Variants = {
   hidden: { opacity: 0, x: 50 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: "easeOut", delay: 0.2 } },
 };
 
-const buttonsVariants = {
+const buttonsVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.4 } },
 };
 
-const socialLinksVariants = {
+const socialLinksVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.6, staggerChildren: 0.1 } },
 };
-
-const socialLinkItemVariants = {
-  hidden: { opacity: 0, y: 10 },
-  visible: { opacity: 1, y: 0 },
-};
-
 
 export function HeroSection() {
   return (
@@ -96,7 +88,7 @@ export function HeroSection() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full">
                 <Button asChild variant="outline" size="lg" className="w-full">
                   <Link href="https://github.com/PraveenNPatil07" target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-5 w-5" /> GitHub
+                    <SiGithub className="mr-2 h-5 w-5" /> GitHub
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="w-full">
@@ -106,12 +98,12 @@ export function HeroSection() {
                 </Button>
                 <Button asChild variant="outline" size="lg" className="w-full">
                   <Link href="https://www.linkedin.com/in/praveenpatil07/" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+                    <SiLinkedin className="mr-2 h-4 w-4" /> LinkedIn
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="w-full">
                   <Link href="https://www.instagram.com/_praveen_patil_07_/" target="_blank" rel="noopener noreferrer">
-                    <Instagram className="mr-2 h-4 w-4" /> Instagram
+                    <SiInstagram className="mr-2 h-4 w-4" /> Instagram
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="w-full">

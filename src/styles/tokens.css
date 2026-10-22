@@ -1,0 +1,49 @@
+/**
+ * Praveen Patil Portfolio 2.0 - Design System Tokens
+ * Aesthetic: Engineering Journal (Dark Editorial & Warm Technical)
+ * All color pairs satisfy WCAG 2.1 AA contrast requirements.
+ */
+
+:root {
+  /* Canvas & Surfaces */
+  --bg: #FBFBF9;
+  --surface: #FFFFFF;
+  --surface-elevated: #F3F3EF;
+
+  /* Typography Colors */
+  --text: #14161A;
+  --text-secondary: #4B5362;
+
+  /* Brand & Accents */
+  --accent: #9A5B00;
+  --border: #E3E4E0;
+
+  /* Semantic Feedback */
+  --success: #2E7D5B;
+  --error: #B3261E;
+
+  /* Component Border Radius */
+  --radius: 0.5rem;
+}
+
+.dark {
+  /* Canvas & Surfaces */
+  --bg: #0F1115;
+  --surface: #171A21;
+  --surface-elevated: #1D222B;
+
+  /* Typography Colors */
+  --text: #F0F0F0;
+  --text-secondary: #A4ACB9;
+
+  /* Brand & Accents */
+  --accent: #F2B35E;
+  --border: #2A303A;
+
+  /* Semantic Feedback */
+  --success: #7BC8A4;
+  --error: #F28B82;
+
+  /* Component Border Radius */
+  --radius: 0.5rem;
+}

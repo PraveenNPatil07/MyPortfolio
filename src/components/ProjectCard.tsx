@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Github } from 'lucide-react';
+import { SiGithub } from 'react-icons/si';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -33,9 +33,9 @@ export function ProjectCard({
           <Image 
             src={imageSrc} 
             alt={imageAlt} 
-            layout="fill" 
-            objectFit="cover" 
-            className="rounded-t-lg"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="rounded-t-lg object-cover"
             data-ai-hint={dataAiHint}
           />
         </div>
@@ -57,7 +57,7 @@ export function ProjectCard({
       <CardFooter>
         <Button asChild variant="outline" size="sm">
           <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-            <Github className="mr-2 h-4 w-4" />
+            <SiGithub className="mr-2 h-4 w-4" />
             GitHub
           </Link>
         </Button>

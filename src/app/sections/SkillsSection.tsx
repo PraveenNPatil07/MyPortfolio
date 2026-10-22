@@ -1,6 +1,6 @@
 "use client";
 import { Section } from "@/components/Section";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { TbBrandCpp } from "react-icons/tb";
 import {
   SiPython,
@@ -71,7 +71,7 @@ export const SkillsSection = () => {
           animate={{ x: ["0%", "-33.33%"] }}
           transition={{
             duration: 50,
-            ease: "linear",
+            ease: "linear" as const,
             repeat: Infinity,
           }}
         >
@@ -81,10 +81,10 @@ export const SkillsSection = () => {
               initial={{ y: 0 }}
               animate={{ y: [4, -4, 4] }}
               transition={{
-                duration: 3.5 + (index % 5), // slight wave variation
+                duration: 3.5 + (index % 5),
                 repeat: Infinity,
-                repeatType: "loop",
-                ease: "easeInOut",
+                repeatType: "loop" as const,
+                ease: "easeInOut" as const,
               }}
               className="relative z-10 overflow-visible rounded-2xl border-4 border-neutral-800 px-8 py-10 group flex flex-col items-bottom justify-bottom bg-neutral-900 min-w-[120px] min-h-[120px] my-auto mx-2"
             >

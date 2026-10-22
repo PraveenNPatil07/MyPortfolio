@@ -2,7 +2,7 @@
 
 import type { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 interface SectionProps {
   id: string;
@@ -31,7 +31,7 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn('w-full overflow-hidden scroll-mt-24', className)} // 👈 Only here
+      className={cn('w-full overflow-hidden scroll-mt-24', className)}
       aria-labelledby={shouldRenderTitle ? `${id}-heading` : undefined}
     >
       <div

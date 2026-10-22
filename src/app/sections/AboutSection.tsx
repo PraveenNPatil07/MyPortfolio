@@ -22,7 +22,7 @@ export function AboutSection() {
 
         <div className="md:col-span-1 space-y-6 text-md text-muted-foreground">
           <p>
-            I'm a final-year engineering student with a strong interest in backend development, data analysis, and building useful software. I work with Python, Java, C, SQL, and JavaScript to create clean and efficient applications.
+            I&apos;m a final-year engineering student with a strong interest in backend development, data analysis, and building useful software. I work with Python, Java, C, SQL, and JavaScript to create clean and efficient applications.
           </p>
           <p>
             My experience includes working with Django, Flask, Bootstrap, and web scraping tools like BeautifulSoup and Selenium. I enjoy turning data into insights using Pandas, NumPy, Matplotlib, and Seaborn.
