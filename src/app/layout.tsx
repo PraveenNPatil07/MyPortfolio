@@ -20,6 +20,50 @@ const geistMono = Geist_Mono({
   display: 'swap',
 });
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: siteConfig.name,
+  jobTitle: siteConfig.role,
+  worksFor: {
+    '@type': 'Organization',
+    name: siteConfig.company,
+  },
+  url: siteConfig.siteUrl,
+  sameAs: [
+    siteConfig.links.linkedin,
+    siteConfig.links.github,
+    siteConfig.links.leetcode,
+    siteConfig.links.codechef,
+  ],
+  knowsAbout: [
+    'Backend Systems Architecture',
+    'Distributed Systems',
+    'Microservices',
+    'Fastify',
+    'Spring Boot',
+    'RabbitMQ',
+    'PostgreSQL',
+    'TypeScript',
+    'Python',
+    'REST APIs',
+    'PASETO v4 Security',
+  ],
+  description: siteConfig.bio,
+};
+
+const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: `${siteConfig.name} · Engineering Portfolio`,
+  url: siteConfig.siteUrl,
+  author: {
+    '@type': 'Person',
+    name: siteConfig.name,
+  },
+  description: siteConfig.bio,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
   title: {
@@ -29,6 +73,10 @@ export const metadata: Metadata = {
   description: siteConfig.bio,
   keywords: [
     'Praveen Patil',
+    'Praveen N Patil',
+    'Praveen Patil Portfolio',
+    'Praveen Patil Brillio',
+    'Praveen Patil Software Engineer',
     'Associate Software Engineer',
     'Backend Engineer',
     'Brillio',
@@ -71,6 +119,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 export default function RootLayout({
@@ -80,6 +131,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`} data-scroll-behavior="smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+        />
+      </head>
       <body className="font-sans antialiased bg-bg text-text min-h-screen selection:bg-accent/20 selection:text-accent">
         {/* WCAG 2.1 AA Skip-to-content accessible bypass link */}
         <a

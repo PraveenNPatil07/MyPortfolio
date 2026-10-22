@@ -9,7 +9,7 @@ export const siteConfig = {
   company: "Brillio",
   headline: "I build software systems, and I care about how they work.",
   bio: "Software engineer at Brillio specializing in backend systems, distributed architectures, and clean engineering practices. Passionate about building robust, scalable services from database schema to API layer.",
-  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://praveenpatil.dev",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://praveenpatil.vercel.app",
   
   // Verified career milestones
   timeline: {
