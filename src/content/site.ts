@@ -10,19 +10,19 @@ export const siteConfig = {
   headline: "I build software systems, and I care about how they work.",
   bio: "Software engineer at Brillio specializing in backend systems, distributed architectures, and clean engineering practices. Passionate about building robust, scalable services from database schema to API layer.",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://praveenpatil.vercel.app",
-  
+
   // Verified career milestones
   timeline: {
     internshipStart: "March 5, 2026",
     internshipEnd: "September 27, 2026",
     conversionDate: "September 28, 2026",
   },
-  
+
   // Feature flags
   resumeEnabled: true, // Enabled following owner confirmation of current resume.pdf
   showProfilePhoto: true, // Enabled per owner request (subtle, non-center focus)
   certificationsEnabled: false, // Hidden until verified credentials are supplied
-  
+
   // Verified social profiles
   links: {
     github: "https://github.com/PraveenNPatil07",
@@ -31,7 +31,7 @@ export const siteConfig = {
     leetcode: "https://leetcode.com/u/Praveen0_7/",
     codechef: "https://www.codechef.com/users/praveenpatil07",
   },
-  
+
   // Authoritative navigation items
   navItems: [
     { label: "Home", href: "/" },
