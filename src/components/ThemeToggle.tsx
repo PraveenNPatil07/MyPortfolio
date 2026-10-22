@@ -14,13 +14,13 @@ export function ThemeToggle() {
     () => true,
     () => false
   );
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme, resolvedTheme } = useTheme();
 
   if (!mounted) {
     return <div className="flex items-center space-x-2 h-10 w-[76px]" />;
   }
 
-  const isDarkMode = theme === "dark";
+  const isDarkMode = (resolvedTheme || theme) === "dark";
 
   const handleThemeChange = (checked: boolean) => {
     setTheme(checked ? "dark" : "light");
